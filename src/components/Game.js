@@ -18,7 +18,9 @@ export default function Game() {
         <>
             <GameHeader />
             <main>
-                {deck.map((value, index) => <Questions question={value.question} answer={value.answer} id={index+1} key={index} />)}
+                <ul>
+                    {deck.map((value, index) => <Questions question={value.question} answer={value.answer} id={index + 1} key={index} />)}
+                </ul>
             </main>
             <GameFooter />
         </>

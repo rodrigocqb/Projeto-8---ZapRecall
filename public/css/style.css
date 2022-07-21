@@ -100,3 +100,56 @@ main {
 .question-closed ion-icon {
     font-size: 30px;
 }
+
+.question-open {
+    width: 299px;
+    height: 131px;
+    background-color: #FFFFD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px 6px 15px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.question-open img {
+    width: 30px;
+    height: 20px;
+    align-self: flex-end;
+}
+
+.colors {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.colors div {
+    color: #FFFFFF;
+    width: 85.17px;
+    height: 37.17px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.colors div>p {
+    width: 80%;
+}
+
+.red {
+    background-color: #FF3030;
+}
+
+.yellow {
+    background-color: #FF922E;
+}
+
+.green {
+    background-color: #2FBE34;
+}
