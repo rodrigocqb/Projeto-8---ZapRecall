@@ -1,5 +1,5 @@
 export default function GameFooter({ answerValues }) {
-    console.log(answerValues);
+
     return (
         <footer>
             {(answerValues.length === 4) &&
@@ -46,6 +46,11 @@ export default function GameFooter({ answerValues }) {
                                 <div key={index} className="G">
                                     <ion-icon name="checkmark-circle"></ion-icon>
                                 </div>
+                            );
+
+                        default:
+                            return (
+                                <></>
                             );
                     }
                 })}

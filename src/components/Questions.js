@@ -80,6 +80,11 @@ export default function Questions({ id, question, answer, answerValues, setAnswe
                         </li>
                     </>
                 );
+
+            default:
+                return (
+                    <></>
+                );
         }
     }
 

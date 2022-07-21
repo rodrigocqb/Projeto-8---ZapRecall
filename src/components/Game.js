@@ -5,7 +5,10 @@ import Questions from "./Questions";
 
 export default function Game() {
     const [answerValues, setAnswerValues] = React.useState([]);
-    console.log(answerValues)
+
+    function randomize() {
+        return Math.random() - 0.5;
+    }
 
     const deck = [
         { question: 'O que é JSX?', answer: 'Uma extensão de linguagem do JavaScript.' },
@@ -18,12 +21,14 @@ export default function Game() {
         { question: 'Usamos estado (state) para __', answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente.' },
     ];
 
+    const gamedeck = (deck.sort(randomize)).slice(0, 4);
+
     return (
         <>
             <GameHeader />
             <main>
                 <ul>
-                    {deck.map((value, index) => <Questions question={value.question} answer={value.answer}
+                    {gamedeck.map((value, index) => <Questions question={value.question} answer={value.answer}
                         id={index + 1} key={index}
                         answerValues={answerValues}
                         setAnswerValues={setAnswerValues} />)}
