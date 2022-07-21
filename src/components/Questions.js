@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Questions({ id, question, answer }) {
+export default function Questions({ id, question, answer, answerValues, setAnswerValues }) {
     const [questionState, setQuestionState] = React.useState(<Closed />);
 
     function Closed() {
@@ -31,9 +31,18 @@ export default function Questions({ id, question, answer }) {
                 <li className="question-open">
                     <p>{answer}</p>
                     <div className="colors">
-                        <div className="red" onClick={() => { setQuestionState(<Answered color="red" />) }} ><p>Não lembrei</p></div>
-                        <div className="yellow" onClick={() => { setQuestionState(<Answered color="yellow" />) }} ><p>Quase não lembrei</p></div>
-                        <div className="green" onClick={() => { setQuestionState(<Answered color="green" />) }} ><p>Zap!</p></div>
+                        <div className="red" onClick={() => {
+                            setAnswerValues((answerValues) => { return [...answerValues, "red"] });
+                            setQuestionState(<Answered color="red" />);
+                        }} ><p>Não lembrei</p></div>
+                        <div className="yellow" onClick={() => {
+                            setAnswerValues((answerValues) => { return [...answerValues, "yellow"] });
+                            setQuestionState(<Answered color="yellow" />)
+                        }} ><p>Quase não lembrei</p></div>
+                        <div className="green" onClick={() => {
+                            setAnswerValues((answerValues) => { return [...answerValues, "green"] });
+                            setQuestionState(<Answered color="green" />)
+                        }} ><p>Zap!</p></div>
                     </div>
                 </li>
             </>

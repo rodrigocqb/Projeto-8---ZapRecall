@@ -59,7 +59,7 @@ header img {
 
 footer {
     width: 100vw;
-    height: 70px;
+    min-height: 70px;
     position: fixed;
     bottom: 0;
     left: 0;

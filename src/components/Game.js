@@ -1,8 +1,12 @@
+import React from "react";
 import GameFooter from "./GameFooter";
 import GameHeader from "./GameHeader";
 import Questions from "./Questions";
 
 export default function Game() {
+    const [answerValues, setAnswerValues] = React.useState([]);
+    console.log(answerValues)
+
     const deck = [
         { question: 'O que é JSX?', answer: 'Uma extensão de linguagem do JavaScript.' },
         { question: 'O React é __', answer: 'uma biblioteca JavaScript para construção de interfaces.' },
@@ -19,10 +23,13 @@ export default function Game() {
             <GameHeader />
             <main>
                 <ul>
-                    {deck.map((value, index) => <Questions question={value.question} answer={value.answer} id={index + 1} key={index} />)}
+                    {deck.map((value, index) => <Questions question={value.question} answer={value.answer}
+                        id={index + 1} key={index}
+                        answerValues={answerValues}
+                        setAnswerValues={setAnswerValues} />)}
                 </ul>
             </main>
-            <GameFooter />
+            <GameFooter answerValues={answerValues} />
         </>
     )
 }
