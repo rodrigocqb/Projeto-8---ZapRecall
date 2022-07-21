@@ -100,7 +100,7 @@ main {
 }
 
 .question-closed ion-icon,
-.question-answered ion-icon {
+.question-answered ion-icon, footer ion-icon {
     font-size: 30px;
 }
 
@@ -173,4 +173,8 @@ main {
 
 .question-answered {
     text-decoration: line-through;
+}
+
+.answer-icons {
+    display: flex;
 }
