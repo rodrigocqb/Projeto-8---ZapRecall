@@ -1,3 +1,7 @@
+import party from "../../assets/img/party.png";
+import sad from "../../assets/img/sad.png";
+import "./style.css";
+
 export default function GameFooter({ answerValues }) {
 
     return (
@@ -6,7 +10,7 @@ export default function GameFooter({ answerValues }) {
                 (answerValues.includes("red") ?
                     <div className="result">
                         <div className="result-title">
-                            <img src="./img/sad.png" alt="" />
+                            <img src={sad} alt="" />
                             <span>Putz...</span>
                         </div>
                         <div className="result-description">
@@ -16,7 +20,7 @@ export default function GameFooter({ answerValues }) {
                     </div> :
                     <div className="result">
                         <div className="result-title">
-                            <img src="./img/party.png" alt="" />
+                            <img src={party} alt="" />
                             <span>Parabéns!</span>
                         </div>
                         <div className="result-description">

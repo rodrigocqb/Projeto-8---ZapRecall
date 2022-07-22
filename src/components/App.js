@@ -1,5 +1,7 @@
-import Welcome from "./Welcome";
+import Welcome from "./Welcome/Welcome";
 import React from "react";
+import "../assets/css/reset.css";
+import "../assets/css/style.css";
 
 export default function App() {
     const [screen, setScreen] = React.useState(<Welcome changeScreen={changeScreen} />);

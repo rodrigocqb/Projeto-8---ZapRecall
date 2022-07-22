@@ -1,0 +1,33 @@
+.answer-icons {
+    display: flex;
+}
+
+.answered {
+    margin-bottom: 6px;
+}
+
+.result span {
+    font-weight: 700;
+}
+
+.result img {
+    width: 23px;
+    height: 23px;
+    margin-right: 12px;
+}
+
+.result>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 222px;
+    text-align: center;
+}
+
+.result-title {
+    margin-top: 10px;
+}
+
+.result-description {
+    margin: 14px 0;
+}

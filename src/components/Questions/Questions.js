@@ -1,4 +1,6 @@
 import React from "react";
+import setinha from "../../assets/img/setinha.png";
+import "./style.css";
 
 export default function Questions({ id, question, answer, answerValues, setAnswerValues }) {
     const [questionState, setQuestionState] = React.useState(<Closed />);
@@ -19,7 +21,7 @@ export default function Questions({ id, question, answer, answerValues, setAnswe
             <>
                 <li className="question-open">
                     <p>{question}</p>
-                    <img src="./img/setinha.png" alt="" onClick={() => { setQuestionState(<Recall />) }} />
+                    <img src={setinha} alt="" onClick={() => { setQuestionState(<Recall />) }} />
                 </li>
             </>
         );

@@ -1,7 +1,8 @@
 import React from "react";
-import GameFooter from "./GameFooter";
-import GameHeader from "./GameHeader";
-import Questions from "./Questions";
+import GameFooter from "../GameFooter/GameFooter";
+import GameHeader from "../GameHeader/GameHeader";
+import Questions from "../Questions/Questions";
+import "./style.css"
 
 export default function Game() {
     const [answerValues, setAnswerValues] = React.useState([]);
