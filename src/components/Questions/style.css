@@ -88,6 +88,7 @@
         height: 92px;
         font-size: 24px;
         padding-left: 23px;
+        margin-bottom: 17px;
     }
 
     .question-open {
@@ -95,6 +96,7 @@
         height: 184px;
         font-size: 26px;
         padding: 15px 23px 10px 23px;
+        margin-bottom: 17px;
     }
 
     .question-open img {

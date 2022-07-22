@@ -59,6 +59,8 @@ export default function GameFooter({ answerValues }) {
                     }
                 })}
             </div>
+            {answerValues.length === 4 &&
+                    <div className="restart" onClick={reset} >REINICIAR RECALL</div>}
         </footer>
     );
 }
