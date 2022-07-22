@@ -5,3 +5,10 @@ main {
     margin-top: 51px;
     margin-bottom: 80px;
 }
+
+@media (min-width: 935px) {
+    main {
+        margin-top: 90px;
+        margin-bottom: 130px;
+    }
+}

@@ -31,7 +31,6 @@ export default function Game() {
                 <ul>
                     {gamedeck.map((value, index) => <Questions question={value.question} answer={value.answer}
                         id={index + 1} key={index}
-                        answerValues={answerValues}
                         setAnswerValues={setAnswerValues} />)}
                 </ul>
             </main>

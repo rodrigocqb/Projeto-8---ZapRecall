@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function GameHeader() {
     return (
-        <header>
+        <header className="header">
             <img src={logo} alt="" />
             <h1>ZapRecall</h1>
         </header>

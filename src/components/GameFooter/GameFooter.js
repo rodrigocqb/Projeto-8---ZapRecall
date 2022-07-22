@@ -1,11 +1,11 @@
-import party from "../../assets/img/party.png";
-import sad from "../../assets/img/sad.png";
+import party from "../../assets/img/party.svg";
+import sad from "../../assets/img/sad.svg";
 import "./style.css";
 
 export default function GameFooter({ answerValues }) {
 
     return (
-        <footer>
+        <footer className="footer">
             {(answerValues.length === 4) &&
                 (answerValues.includes("red") ?
                     <div className="result">

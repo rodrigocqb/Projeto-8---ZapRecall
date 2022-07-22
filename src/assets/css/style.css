@@ -15,42 +15,6 @@ h1 {
     color: #FFFFFF;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    margin-top: 5vh;
-}
-
-header img {
-    width: 52px;
-    height: 60px;
-    margin-right: 20px;
-}
-
-footer {
-    width: 100vw;
-    min-height: 70px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    color: #333333;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
-    padding-top: 5px;
-    padding-bottom: 3px;
-}
-
-footer ion-icon {
-    font-size: 30px;
-}
-
 .R {
     color: #FF3030;
 }
@@ -61,4 +25,10 @@ footer ion-icon {
 
 .G {
     color: #2FBE34;
+}
+
+@media (min-width: 935px) {
+    h1 {
+        font-size: 64px;
+    }
 }

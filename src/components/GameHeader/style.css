@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin-top: 5vh;
+}
+
+.header img {
+    width: 52px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+@media (min-width:935px) {
+    .header {
+        margin-top: 7vh;
+    }
+
+    .header img {
+        width: 86.96px;
+        height: 100px;
+    }
+}

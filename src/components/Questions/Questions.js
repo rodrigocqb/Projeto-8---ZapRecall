@@ -1,8 +1,8 @@
 import React from "react";
-import setinha from "../../assets/img/setinha.png";
+import setinha from "../../assets/img/setinha.svg";
 import "./style.css";
 
-export default function Questions({ id, question, answer, answerValues, setAnswerValues }) {
+export default function Questions({ id, question, answer, setAnswerValues }) {
     const [questionState, setQuestionState] = React.useState(<Closed />);
 
     function Closed() {
