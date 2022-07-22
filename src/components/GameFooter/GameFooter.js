@@ -2,7 +2,7 @@ import party from "../../assets/img/party.svg";
 import sad from "../../assets/img/sad.svg";
 import "./style.css";
 
-export default function GameFooter({ answerValues }) {
+export default function GameFooter({ answerValues, setScreen }) {
 
     return (
         <footer className="footer">
@@ -60,7 +60,7 @@ export default function GameFooter({ answerValues }) {
                 })}
             </div>
             {answerValues.length === 4 &&
-                    <div className="restart" onClick={reset} >REINICIAR RECALL</div>}
+                <div className="restart" onClick={() => setScreen(true)} >REINICIAR RECALL</div>}
         </footer>
     );
 }

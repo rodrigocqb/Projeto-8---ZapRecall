@@ -4,7 +4,7 @@ import GameHeader from "../GameHeader/GameHeader";
 import Questions from "../Questions/Questions";
 import "./style.css"
 
-export default function Game() {
+export default function Game({setScreen}) {
     const [answerValues, setAnswerValues] = React.useState([]);
 
     function randomize() {
@@ -34,7 +34,7 @@ export default function Game() {
                         setAnswerValues={setAnswerValues} />)}
                 </ul>
             </main>
-            <GameFooter answerValues={answerValues} />
+            <GameFooter answerValues={answerValues} setScreen={setScreen} />
         </>
     )
 }
