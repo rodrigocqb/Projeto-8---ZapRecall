@@ -29,7 +29,7 @@ export default function Welcome({ setScreen, deck, setDeck, zapTarget, setZapTar
                     }
                 }}></input>
                 <div className={"button" + disableButton} onClick={() => {
-                    (zapTarget < 1 || zapTarget > 4) ?
+                    (zapTarget < 1 || zapTarget > 4 || isNaN(zapTarget)) ?
                         alert("Insira uma meta de zaps com mínimo 1 e máximo 4") :
                         ((deck !== "") ? setScreen(false) :
                             alert("Escolha um deck antes de prosseguir"))
