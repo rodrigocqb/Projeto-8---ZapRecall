@@ -68,10 +68,6 @@
     margin-bottom: 22px;
 }
 
-.restart:hover {
-    cursor: pointer;
-}
-
 @media (min-width: 935px) {
     .footer {
         min-height: 118px;
@@ -85,5 +81,15 @@
     .result img {
         width: 38.3px;
         height: 38.3px;
+    }
+
+    .restart {
+        width: 279px;
+        height: 53px;
+        font-size: 23.5px;
+    }
+
+    .restart:hover {
+        cursor: pointer;
     }
 }
