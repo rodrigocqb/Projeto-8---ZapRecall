@@ -12,6 +12,10 @@
     margin-bottom: 20px;
 }
 
+.welcome h1 {
+    margin-bottom: 40px;
+}
+
 .button {
     width: 246px;
     height: 54px;
@@ -23,6 +27,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
     font-size: 18px;
+}
+
+.welcome select {
+    width: 246px;
+    height: 43px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 0px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    color: #ADADAD;
+    font-size: 14px;
 }

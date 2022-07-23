@@ -6,12 +6,13 @@ import "../assets/css/style.css";
 
 export default function App() {
     const [screen, setScreen] = React.useState(true);
+    const [deck, setDeck] = React.useState("");
 
     return (
         <>
             {screen ?
-            (<Welcome setScreen={setScreen} />) :
-            (<Game setScreen={setScreen} />)}
+            (<Welcome setScreen={setScreen} deck={deck} setDeck={setDeck} />) :
+            (<Game setScreen={setScreen} deck={deck} />)}
         </>
     );
 }
