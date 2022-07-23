@@ -4,7 +4,7 @@ import GameHeader from "../GameHeader/GameHeader";
 import Questions from "../Questions/Questions";
 import "./style.css";
 
-export default function Game({ setScreen, deck }) {
+export default function Game({ setScreen, deck, zapTarget }) {
     const [answerValues, setAnswerValues] = React.useState([]);
     let chosenDeck = [];
 
@@ -58,7 +58,7 @@ export default function Game({ setScreen, deck }) {
                         setAnswerValues={setAnswerValues} />)}
                 </ul>
             </main>
-            <GameFooter answerValues={answerValues} setScreen={setScreen} />
+            <GameFooter answerValues={answerValues} setScreen={setScreen} zapTarget={zapTarget} />
         </>
     )
 }

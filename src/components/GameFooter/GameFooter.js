@@ -2,19 +2,27 @@ import party from "../../assets/img/party.svg";
 import sad from "../../assets/img/sad.svg";
 import "./style.css";
 
-export default function GameFooter({ answerValues, setScreen }) {
+export default function GameFooter({ answerValues, setScreen, zapTarget, reset }) {
+
+    function rightAnswer(value) {
+        if (value === "green") {
+            return true;
+        }
+    }
+
+    let zapArray = answerValues.filter(rightAnswer);
 
     return (
         <footer className="footer">
             {(answerValues.length === 4) &&
-                (answerValues.includes("red") ?
+                (zapArray.length < zapTarget ?
                     <div className="result">
                         <div className="result-title">
                             <img src={sad} alt="" />
                             <span>Putz...</span>
                         </div>
                         <div className="result-description">
-                            <p>Ainda faltam alguns...
+                            <p>Ainda faltam alguns para sua meta...
                                 Mas não desanime!</p>
                         </div>
                     </div> :
@@ -24,7 +32,7 @@ export default function GameFooter({ answerValues, setScreen }) {
                             <span>Parabéns!</span>
                         </div>
                         <div className="result-description">
-                            <p>Você não esqueceu de nenhum flashcard!</p>
+                            <p>Você atingiu sua meta de flashcards!</p>
                         </div>
                     </div>)}
             <div className="answered">{answerValues.length}/4 CONCLUÍDOS</div>
@@ -60,7 +68,9 @@ export default function GameFooter({ answerValues, setScreen }) {
                 })}
             </div>
             {answerValues.length === 4 &&
-                <div className="restart" onClick={() => setScreen(true)} >REINICIAR RECALL</div>}
+                <div className="restart" onClick={() => {
+                    setScreen(true);
+                }} >REINICIAR RECALL</div>}
         </footer>
     );
 }

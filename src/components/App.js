@@ -7,12 +7,13 @@ import "../assets/css/style.css";
 export default function App() {
     const [screen, setScreen] = React.useState(true);
     const [deck, setDeck] = React.useState("");
-    const [zapTarget, setZapTarget] = React.useState();
+    const [zapTarget, setZapTarget] = React.useState(0);
 
     return (
         <>
             {screen ?
-                (<Welcome setScreen={setScreen} deck={deck} setDeck={setDeck} setZapTarget={setZapTarget} />) :
+                (<Welcome setScreen={setScreen} deck={deck} setDeck={setDeck}
+                    setZapTarget={setZapTarget} zapTarget={zapTarget} />) :
                 (<Game setScreen={setScreen} deck={deck} zapTarget={zapTarget} />)}
         </>
     );
