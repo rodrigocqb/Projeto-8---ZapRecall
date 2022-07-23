@@ -6,7 +6,6 @@ import "./style.css";
 
 export default function Game({ setScreen, deck }) {
     const [answerValues, setAnswerValues] = React.useState([]);
-    console.log(deck)
     let chosenDeck = [];
 
     const deckReact = [
@@ -27,7 +26,7 @@ export default function Game({ setScreen, deck }) {
         { question: "Quem foi a primeira vítima do Mindflayer", answer: "Billy" },
         { question: "Quem é o melhor amigo do Eddie?", answer: "Dustin" },
         { question: "Qual o nome do gato do Dustin", answer: "Mews" },
-        { question: "Como a Joyce se comunica com o Will na primeira temporada?", answer: "Luzes de natal" }
+        { question: "Como a Joyce se comunica com o Will na primeira temporada?", answer: "Luzes de natal" },
     ];
 
     switch (deck) {

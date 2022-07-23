@@ -41,3 +41,21 @@
     color: #ADADAD;
     font-size: 14px;
 }
+
+.target {
+    width: 246px;
+    height: 43px;
+    border: 0px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding-left: 10.5px;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #FB6B6B;
+}
+
+.target::placeholder {
+    color: #ADADAD;
+    opacity: 1;
+}

@@ -6,7 +6,6 @@ export default function Welcome({ setScreen, deck, setDeck }) {
     
     function handleChange(event) {
         setDeck(event.target.value);
-        console.log(deck);
     }
 
     return (
@@ -19,6 +18,7 @@ export default function Welcome({ setScreen, deck, setDeck }) {
                     <option value="React">React</option>
                     <option value="Stranger Things">Stranger Things</option>
                 </select>
+                <input placeholder="Digite sua meta de zaps..." className="target"></input>
                 <div className="button" onClick={() => {
                     (deck !== "") ? setScreen(false) :
                     alert("Escolha um deck antes de prosseguir")
