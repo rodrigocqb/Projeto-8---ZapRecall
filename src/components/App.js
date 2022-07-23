@@ -14,7 +14,8 @@ export default function App() {
             {screen ?
                 (<Welcome setScreen={setScreen} deck={deck} setDeck={setDeck}
                     setZapTarget={setZapTarget} zapTarget={zapTarget} />) :
-                (<Game setScreen={setScreen} deck={deck} zapTarget={zapTarget} />)}
+                (<Game setScreen={setScreen} deck={deck} zapTarget={zapTarget}
+                    setZapTarget={setZapTarget} setDeck={setDeck} />)}
         </>
     );
 }

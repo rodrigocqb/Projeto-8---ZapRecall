@@ -2,7 +2,7 @@ import party from "../../assets/img/party.svg";
 import sad from "../../assets/img/sad.svg";
 import "./style.css";
 
-export default function GameFooter({ answerValues, setScreen, zapTarget, reset }) {
+export default function GameFooter({ answerValues, setScreen, setDeck, zapTarget, setZapTarget }) {
 
     function rightAnswer(value) {
         if (value === "green") {
@@ -69,6 +69,8 @@ export default function GameFooter({ answerValues, setScreen, zapTarget, reset }
             </div>
             {answerValues.length === 4 &&
                 <div className="restart" onClick={() => {
+                    setDeck("");
+                    setZapTarget(0);
                     setScreen(true);
                 }} >REINICIAR RECALL</div>}
         </footer>
