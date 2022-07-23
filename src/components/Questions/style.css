@@ -104,9 +104,17 @@
         height: 33.3px;
     }
 
+    .question-open img:hover {
+        cursor: pointer;
+    }
+
     .question-closed ion-icon,
     .question-answered ion-icon {
         font-size: 50px;
+    }
+
+    .question-closed ion-icon:hover {
+        cursor: pointer;
     }
 
     .colors {
@@ -118,5 +126,9 @@
         width: 118px;
         height: 51px;
         font-size: 17px;
+    }
+
+    .colors div:hover {
+        cursor: pointer;
     }
 }

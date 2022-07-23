@@ -68,6 +68,10 @@
     margin-bottom: 22px;
 }
 
+.restart:hover {
+    cursor: pointer;
+}
+
 @media (min-width: 935px) {
     .footer {
         min-height: 118px;
