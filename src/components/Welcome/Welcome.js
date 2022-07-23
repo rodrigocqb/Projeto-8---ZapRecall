@@ -3,6 +3,7 @@ import logo from "../../assets/img/main-logo.png";
 import "./style.css";
 
 export default function Welcome({ setScreen, deck, setDeck, zapTarget, setZapTarget }) {
+    const [disableButton, setDisableButton] = React.useState(" disabled");
 
     function handleChange(event) {
         setDeck(event.target.value);
@@ -20,8 +21,14 @@ export default function Welcome({ setScreen, deck, setDeck, zapTarget, setZapTar
                 </select>
                 <input placeholder="Digite sua meta de zaps..." className="target" onChange={(e) => {
                     setZapTarget(e.target.value);
+                    if (e.target.value >= 1 && e.target.value <= 4) {
+                        setDisableButton("");
+                    }
+                    else {
+                        setDisableButton(" disabled")
+                    }
                 }}></input>
-                <div className="button" onClick={() => {
+                <div className={"button" + disableButton} onClick={() => {
                     (zapTarget < 1 || zapTarget > 4) ?
                         alert("Insira uma meta de zaps com mínimo 1 e máximo 4") :
                         ((deck !== "") ? setScreen(false) :
